@@ -207,6 +207,12 @@
            font-weight: 500; 
         }
     }
+    &-star {
+        font-size: 12px;
+        span {
+            color: $bg;
+        }
+    }
 }
 .products__bottom-btn {
     margin-top: 45px;
@@ -228,9 +234,39 @@
         }
     }
 }
-  
-
-
-
 //end products
+// start product-slider
+.products-slider {
+    padding: 110px 0px 120px;
+    .slick-dots {
+        margin-top: 65px;
+        text-align: center;
+        li {
+            display: inline-block;
+            & + li {
+                margin-left: 5px;
+            }
+            button {
+                padding: 0;
+                border: 0;
+                background-color: #e8e8e8;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                outline: none;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            &.slick-active{ 
+                button {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
+
+
+
+// end product-slider
   
