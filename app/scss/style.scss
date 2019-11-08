@@ -48,7 +48,7 @@
         }
         a {
             color: #fff;
-            font-weight: 500;
+            @include f500;
             font-size: 14px;
         }
     }
@@ -68,12 +68,12 @@
     text-align: center;
     &-title {
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         margin-bottom: 10px;
         line-height: 72px;
     }
     &-text {
-        font-weight: 500;
+        @include f500;
         font-size: 20px;
         margin-bottom: 50px;
         line-height: 30px;
@@ -88,7 +88,7 @@
             height: 56px;
             box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
             letter-spacing: 0.5px;
-            font-weight: 500;
+            @include f500;
             font-size: 14px;
             padding: 0px 60px 0px 25px;
             &::placeholder {
@@ -125,8 +125,8 @@
         background-color: #fff;
         font-size: 14px;
         color: $bg;
-        font-weight: 500;
-        cursor: pointre;
+        @include f500;
+        cursor: pointer;
         & + button {
             margin-left: 5px;
         }
@@ -160,7 +160,7 @@
         align-items: center;
         padding: 10px 30px;
         min-height: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     }
     &-name {
@@ -178,7 +178,7 @@
         color: $green;
     }
     &-price {
-        font-weight: 700;
+        @include f700;
         font-size: 20px;
         color: $bg;
     }
@@ -192,6 +192,7 @@
     &-author {
         display: flex;
         align-items: center;
+        max-width: 250px;
         .avatar {
             width: 30px;
             height: 30px;
@@ -204,7 +205,7 @@
         }
         span {
            font-size: 14px;
-           font-weight: 500; 
+           @include f500; 
         }
     }
     &-star {
@@ -226,7 +227,6 @@
         padding: 18px 30px;
         font-size: 16px;
         color: $bg;
-        font-weight: 400;
         box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
         &.mixitup-control-active {
             background-color: $red;
@@ -265,8 +265,63 @@
         }
     }
 }
-
-
-
 // end product-slider
-  
+ 
+// start advantages
+
+.advantages {
+    background-color: $bg;
+    padding: 110px 0px;
+}
+.advantages__title {
+    color: #fff;
+}
+
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item {
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 15px;
+    &:hover {
+        .advantages__item-images {
+            background-color: $green;
+            path {
+                fill: #fff; 
+            }
+        }
+        .advantages__item-title {
+            color: $green;
+        } 
+    }
+    &-images {
+        margin: 0px auto 30px;
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+    }
+    &-title {
+        font-size: 24px;
+        @include f500;
+        margin-bottom: 20px;
+        color: #fff;
+        transition: all .5s;
+    }
+    &-text {
+        color: #b0bec5;
+    }
+    & svg path{
+        transition: all .5s;
+     }     
+}
+
+
+// end advantages
