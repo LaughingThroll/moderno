@@ -342,7 +342,7 @@
         justify-content: center;
         align-items: center;
         background-color: $green;
-        // padding: 0px 60px;
+        padding: 20px 0px;
     }
     &__title {
         font-size: 30px;
@@ -350,6 +350,7 @@
         line-height: 30px;
         color: #fff;
         margin-right: 40px;
+       
         span {
             @include f700;
         }
@@ -364,3 +365,36 @@
 }
 
 // end author
+
+
+// start tutorial
+.tutorial {
+    padding: 70px 0 145px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        &-images {
+            min-height: 270px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+        }
+        &-title {
+            background-color: #f8f8f8;
+            padding: 30px 10px;
+            @include f700;
+            font-size: 24px;
+            color: $bg;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+
+// end tutorial
