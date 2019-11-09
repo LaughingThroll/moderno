@@ -55,3 +55,18 @@ input {
     display: inline-block;
     margin-right: 11px;
 }
+
+.angle-right {
+    position: relative;
+    padding-left: 14px;
+    &::before {
+        content: "\f105";
+        font-family: 'icomoon';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $green;
+    }
+}
