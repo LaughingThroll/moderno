@@ -4,6 +4,9 @@
 
 
 //start header
+  .header {
+        background-color: #fff;
+  }
  .header__top-inner {
      display: flex;
      justify-content: space-between;
@@ -62,7 +65,10 @@
         }
     }
 }
-
+.header__btn-menu,
+.menu__btn {
+    display: none;
+}
 .header__box {
     display: flex;
     align-items: center;
@@ -112,13 +118,13 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
 }
 
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -175,7 +181,7 @@
 .basket__box,
 .notification__box,
 .message__box  {
-    margin-top: 49px;
+    margin-top: 53px;
     margin-left: 15px;
     
     &:hover {
@@ -195,13 +201,14 @@
 }
 .circle__menu {
     position: absolute;
-    top: 64px;
+    top: 62px;
     right: 0;
     height: 0;
     border-top: 1px solid #d3d3d3;
     background-color: #fff;
     overflow: hidden;
     transition: all .3s;
+    z-index: 2;
 }
 .circle__item {
     border: 1px solid #d3d3d3;
@@ -299,6 +306,7 @@
     height: 0px;
     overflow: hidden;
     transition: all .3s;
+    z-index: 2;
     li {
         margin-bottom: 15px;
     }
@@ -1144,3 +1152,6 @@
 
 
 // end products-page
+
+
+@import 'media';
