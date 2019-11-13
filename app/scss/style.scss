@@ -316,6 +316,115 @@
 }
 
 //end header
+
+// start modal
+#modal {
+    color: #fff;
+    background-color: $green;
+    max-width: 730px;
+    width: 100%;
+   
+    padding: 90px 0 100px
+    
+}
+.login__title {
+    @include f700;
+    font-size: 48px;
+    line-height: 36px;
+    color: #fff;
+    margin-bottom: 40px; 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login__wrapper {
+    form{
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    label {
+        position: relative;
+        display: block;
+        &::before {
+            position: absolute;
+            left: 18px;
+            color: #fff;
+            font-family: 'icomoon';
+            font-size: 14px;
+            top: 9px;
+        }
+    }
+    .label__login-name::before {
+        content: "\f007";
+    }
+    .label__login-pass::before {
+        content: '\f023';
+    }
+    input {
+        border: none;
+        height: 43px;
+        margin-bottom: 8px;
+        display: block;
+        width: 100%;
+        background-color: #76ae36;
+        padding: 0px 20px 0px 40px;
+        color: #fff;
+        font-size: 14px;
+        &::placeholder {
+            color: #fff;
+        }
+
+    }
+    button {
+        width: 140px;
+        background-color: #fff;
+        border: none;
+        @include f700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #000;
+        padding: 17px 5px;
+        box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+        margin-top: 19px;
+    }
+}
+.create-acc {
+    background-color: #76ae36;
+    width: 250px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 11px 0px 15px 36px;
+    position: relative;
+    &::before {
+        content: '\f044';
+        font-family: 'icomoon';
+        position: absolute;
+        top: 11px;
+        left: 36px;
+        font-size: 18px;
+    }
+
+}
+.lost-pass {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.fancybox-button {
+    svg {
+        display: none;
+    }
+    &::before {
+        content: '\f00d';
+        font-family: 'icomoon';
+        font-size: 18px;
+    }
+}
+// end modal
+
 //start search
 
 .search {
@@ -1495,5 +1604,104 @@
     }
 }
 // end product-one
+// start page-404
+.page-404 {
+    &__inner {
+        text-align: center;
+        background-color: $green;
+        padding: 70px 0px 100px;
+        color: #fff;
+    }
+    &__404 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 300px;
+        line-height: 300px;
+        max-width: 770px;
+        width: 100%;
+        text-align: left;
+        margin: 0 auto;
+        padding-left: 55px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url(../images/page-404.png);
+            width: 150px;
+            height: 292px;
+            margin-left: 28px;
+        }
+    }
+    &__title {
+        margin-top: 25px;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 25px;
+    }
+    &__text {
+        max-width: 570px;
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Raleway',sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+    &__link {
+        font-family: 'Raleway',sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 13px 20px; 
+        text-transform: uppercase;
+    }
+    
+}
+.page-404__wrapper,
+.about__wrapper {
+  border: 1px solid #dcdcdc;
+  border-bottom: none;
+  margin-bottom: 150px;  
+}
+.page-404__head,
+.about__head {
+    @include f500;
+    font-size: 24px;
+    color: #444;
+    padding: 20px 28px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+// end page-404
+
+// start about
+.about {
+    &__wrapper {
+        border-bottom: 1px solid #dcdcdc;
+    }
+}
+.about__inner {
+    padding:  0px 50px;
+}
+.about__box {
+    h3 {
+        font-size: 20px;
+        @include f700;
+        color: #444;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 15px;
+        color: #707070;
+        margin-bottom: 40px;
+    }
+}
+// end about
 
 @import 'media';
