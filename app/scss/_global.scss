@@ -18,7 +18,6 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $text;
-    overflow-x: hidden;
 }
 a{
     display: inline-block;
@@ -82,6 +81,8 @@ input {
 .breadcrumbs {
     &__inner {
         padding: 45px 0px 40px;
+        width: 1200px;
+        overflow: hidden;
     }
     &__list {
         li{

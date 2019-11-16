@@ -324,7 +324,7 @@
     background-color: $green;
     max-width: 730px;
     width: 100%;
-    padding: 90px 0 100px
+    padding: 90px 10px 100px
 }
 .login__title {
     @include f700;
@@ -492,8 +492,13 @@
 
 //start products
 .products {
-    padding: 110px 0px;
+    padding: 140px 0px;
     background-color: $grey;
+}
+.products__wrapper,
+.products-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .products__inner-btn {
     text-align: center;
@@ -519,14 +524,20 @@
 
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
+}
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .product__item {
     max-width: 442px;
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
+    background-color: #fff;
     &-img {
         min-height: 250px;
         background-repeat: no-repeat;
@@ -1094,10 +1105,10 @@
     width: 100%;
     .product__item {
         background-color: #fff;
-        max-width: 270px;
-        width: 100%;
+        flex-basis: calc(33.3333% - 30px);
         transition: all .5s;
         margin-bottom: 30px;
+        margin-left: 30px;
         &-img {
             min-height: 180px;
         }
@@ -1119,8 +1130,9 @@
 }
 .products-page__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 .products-page__filter {
     height: 60px;
@@ -1220,7 +1232,7 @@
 }
 .product__item {
     &.list {
-        max-width: 100%;
+        flex-basis: 100%;
         .product__item-img {
             width: 240px;
             float: left;
@@ -1254,11 +1266,9 @@
             margin-left: auto;
             margin-right: 30px;
         }
+        
     }
-}
-  
-
-
+}   
 // end products-page
 // start product-one
 .product-one {
@@ -1273,9 +1283,7 @@
     }
     &__images-inner {
         border: 1px solid #dfdfdf;
-        display: flex;
-        justify-content: center;
-        padding: 16px 0;
+        padding: 16px;
         background-color: #fff;
         
     }
@@ -1933,14 +1941,6 @@
     color: #444;
     text-transform: capitalize;
   }
-  select {
-    height: 38px;
-    background-color: #f9f9f9;
-    padding: 0px 10px;
-    width: 100%;
-    border: 1px solid #dcdcdc;
-    color: #707070;
-  }
   input {
     height: 38px;
     background-color: #f9f9f9;
@@ -1948,6 +1948,42 @@
     width: 100%;
     border: 1px solid #dcdcdc;
   }
+  .jq-selectbox {
+    width: 100%;
+}
+.jq-selectbox__select {
+    height: 38px;
+    padding: 0px 17px;
+    border: 1px solid #dcdcdc;
+    border-bottom-color: #dcdcdc;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-size: 15px;
+    font-family: 'Roboto-Regular', sans-serif;
+    line-height: 38px;
+    color: #707070;
+    text-shadow: none;
+}
+.jq-selectbox__select-text {
+    width: 100% !important;
+    height: 38px;
+}
+.jq-selectbox__trigger {
+    border: none;
+}
+.jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0px;
+    right: 20px;
+    font-size: 15px;
+    line-height: 38px;
+    color: #444;
+    &::before {
+        content: '\f0d7';
+        font-family: 'icomoon';
+    }
+}
 }
 // end settings
 // start profile
@@ -2005,13 +2041,16 @@
   padding: 15px 5px;
   box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
   color: #fff;
-  position: relative;
-  &::before {
-    content: '\f003';
-    position: absolute;
-    top: 14px;
-    left: 55px;
-    font-family: 'icomoon';
+  span {
+    position: relative;
+    padding-left: 30px;
+        &::before {
+        content: '\f003';
+        position: absolute;
+        top: -4px;
+        left: 0;
+        font-family: 'icomoon';
+    } 
   }
 }
 .profile__aside-following {
@@ -2175,10 +2214,10 @@
         height: 38px;
         border: 1px solid #dcdcdc;
         background-color: #f9f9f9;
-				padding: 0px 17px;
-				&::placeholder {
-        color: #707070;
-    		}
+		padding: 0px 17px;
+		&::placeholder {
+            color: #707070;
+    	}
     } 
     
     input[type="file"] {
@@ -2381,12 +2420,11 @@
 		top: 34px;
 	}
 }
-.withdrawal__items {
+.withdrawals__items {
 	margin-bottom: 35px;
 }
 .withdrawal__item {
 	display: flex;
-	justify-content: space-between;
 	padding: 10px 30px;
 	font-size: 13px;
 	color: #444;
